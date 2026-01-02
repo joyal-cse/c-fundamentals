@@ -6,7 +6,6 @@ struct Student {
     float marks[5]; 
     float percentage;
 };
-
 int main()
  {
     int n, i, j;
@@ -15,14 +14,16 @@ int main()
     scanf("%d", &n);
     struct Student students[n];
     // Input student details
-    for(i = 0; i < n; i++) {
+    for(i = 0; i < n; i++)
+        {
         printf("Enter details of student %d\n", i+1);
         printf("Name: ");
         scanf(" %s", students[i].name);
         printf("Roll Number: ");
         scanf("%d", &students[i].rollNo);
         float sumMarks=0;
-        for(j = 0; j < totalSubjects; j++) {
+        for(j = 0; j < totalSubjects; j++)
+            {
             printf("Marks for subject %d: ", j+1);
             scanf("%f", &students[i].marks[j]);
             sumMarks+=students[i].marks[j];
@@ -38,3 +39,4 @@ int main()
     }
     return 0;
 }
+
